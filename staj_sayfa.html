@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Professionell</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Bannière des cookies -->
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+      <p>Nous utilisons des cookies pour améliorer votre expérience. En poursuivant votre navigation sur ce site, vous acceptez notre utilisation des cookies.</p>
+      <button id="accept-cookies">Accepter</button>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="#profil">Profil</a></li>
+      <li><a href="#erfahrung">Erfahrung</a></li>
+      <li><a href="#ausbildung">Ausbildung</a></li>
+      <li><a href="#kompetenzen">Kompetenzen</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- Information personnelle -->
+    <h1>Can Ata Kerim</h1>
+    <img src="C:\Users\atake\Desktop\web sayfa/benimfotoeski.jpg" class="profile-photo">
+    <p>
+      Adresse : Heinrich Hoffmann Str. 5, Frankfurt am Main, Allemagne<br>
+      Téléphone : 015731150282<br>
+      Email : <a href="mailto:atakerimcan@hotmail.com">atakerimcan@hotmail.com</a><br>
+      <div class="links">
+        <a href="https://linkedin.com/in/nomprénom" target="_blank">LinkedIn</a>
+        <a href="https://github.com/nomprénom" target="_blank">GitHub</a>
+        <a href="https://twitter.com/nomprénom" target="_blank">Twitter</a>
+        <a href="https://wa.me/?text=Schau%20dir%20mein%20CV%20an!" target="_blank">WhatsApp</a>
+      </div>
+    </p>
+
+    <!-- Profil -->
+    <h2 id="profil">Profil</h2>
+    <p>
+      Neugieriger und kreativer Schüler, der sehr gut mit Menschen und Aufgaben umgehen kann.
+    </p>
+
+    <!-- Vidéo -->
+    <h2 id="video">Präsentationsvideo</h2>
+    <iframe class="video" src="https://www.youtube.com/embed/votre_video_id" frameborder="0" allowfullscreen></iframe>
+
+    <!-- Expérience -->
+    <h2 id="erfahrung">Berufserfahrung</h2>
+    <h3>Praktikant - Hoffmanns Höfe</h3>
+    <p><strong>Juni 2024 (2 Wochen)</strong></p>
+    <ul>
+      <li>Gesehen was ein Hotelangestellter macht</li>
+      <li>Zusammenarbeit mit dem Finanzenleiter und der Rezeption</li>
+      <li>Mich mit Kunden beschäftigt</li>
+    </ul>
+
+    <!-- Formation -->
+    <h2 id="ausbildung">Praktikum</h2>
+    <h3>Schüler der 10. Klasse</h3>
+    <p><strong>Lycée Français International Victor Hugo, Frankfurt am Main - 2025</strong></p>
+
+    <!-- Compétences -->
+    <h2 id="kompetenzen">Kompetenzen</h2>
+    <ul class="skills">
+      <li>Kommunikation</li>
+      <li>Teamfähig</li>
+      <li>Problemlösungsorientiert</li>
+      <li>Kreativ</li>
+    </ul>
+
+    <!-- Langues -->
+    <h2 id="sprachen">Sprachen</h2>
+    <p>
+      <li>Französisch (C1)</li>
+      <li>Deutsch (B2)</li>
+      <li>Englisch (B1)</li>
+      <li>Chinesisch (A2)</li>
+      <li>Türkisch (Muttersprache)</li>
+    </p>
+
+    <!-- Contact -->
+    <h2 id="kontakt">Kontaktieren Sie mich</h2>
+    <form class="contact-form" action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-Mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Nachricht:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Absenden</button>
+    </form>
+
+    <div class="footer">
+      <p>&copy; 2025 Can Ata Kerim. Alle Rechte vorbehalten ©.</p>
+    </div>
+  </div>
+
+  <!-- JavaScript pour la bannière de cookies -->
+  <script>
+    // Attendre que le DOM soit complètement chargé
+    document.addEventListener('DOMContentLoaded', function() {
+        var cookieBanner = document.getElementById('cookie-banner');
+        var acceptButton = document.getElementById('accept-cookies');
+        
+        // Vérifier si l'utilisateur a déjà accepté les cookies
+        if (!localStorage.getItem('cookiesAccepted')) {
+            // Afficher la bannière avec animation
+            setTimeout(function() {
+                cookieBanner.classList.add('show');
+            }, 1000); // Attendre 1 seconde avant de montrer la bannière
+        }
+
+        // Si l'utilisateur accepte les cookies
+        acceptButton.addEventListener('click', function() {
+            // Cacher la bannière avec animation
+            cookieBanner.classList.remove('show');
+            
+            // Sauvegarder que l'utilisateur a accepté les cookies
+            localStorage.setItem('cookiesAccepted', 'true');
+            
+            // Attendre que l'animation soit terminée avant de cacher l'élément
+            setTimeout(function() {
+                cookieBanner.style.display = 'none';
+            }, 500); // Délai de 500ms pour laisser l'animation se terminer
+        });
+    });
+  </script>
+</body>
+</html>
