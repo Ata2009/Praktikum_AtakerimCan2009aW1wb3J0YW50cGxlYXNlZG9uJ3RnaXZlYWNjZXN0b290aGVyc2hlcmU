@@ -9,7 +9,18 @@ body {
     padding: 0;
     background-color: #4f6c82; /* Gris très clair */
     color: #333;
+    animation: fadeInBody 2s ease-in-out;
 }
+
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* Navbar styles */
 nav {
     background: rgba(0, 123, 255, 0.8);
@@ -39,11 +50,12 @@ nav:hover {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s ease;
 }
 
 .navbar a:hover {
     color: #FFD700;
+    transform: scale(1.1);
 }
 
 /* Main container */
@@ -56,6 +68,11 @@ nav:hover {
     box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);  /* Larger shadow for depth */
     background-image: url('https://www.transparenttextures.com/patterns/diagonal-stripes.png'); /* Subtle background texture */
     background-color: #ffffff;
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* Main heading */
@@ -63,9 +80,9 @@ h1, h2, h3 {
     color: #007BFF;  /* Primary blue color */
     margin-bottom: 15px;
     font-family: 'Playfair Display', serif;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Title h1 */
 h1 {
     font-size: 3em;
     font-weight: 700;
@@ -73,23 +90,21 @@ h1 {
     padding-bottom: 8px;
 }
 
-/* Section headings h2 */
 h2 {
     font-size: 2.2em;
     margin-top: 30px;
     font-weight: 600;
     cursor: pointer;
-    transition: color 0.3s;
 }
 
-h2:hover {
-    color: #007BFF;
-}
-
-/* Subtitle h3 */
 h3 {
     font-size: 1.6em;
     font-weight: 500;
+}
+
+h1:hover, h2:hover, h3:hover {
+    transform: scale(1.05);  /* Reduced scale effect */
+    color: #0056b3;
 }
 
 /* Paragraphs */
@@ -132,7 +147,7 @@ p {
 
 .skills li:hover {
     background: #d0e7ff;
-    transform: scale(1.05);  /* Smooth scale effect on hover */
+    transform: scale(1.05);
 }
 
 /* Contact form styling */
@@ -168,12 +183,13 @@ p {
     border-radius: 8px;
     cursor: pointer;
     font-size: 1.2em;
-    transition: background 0.3s, transform 0.2s ease;
+    transition: background 0.3s, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .contact-form button:hover {
     background-color: #0056b3;
-    transform: scale(1.05);  /* Button hover scaling */
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer styles */
@@ -191,12 +207,13 @@ p {
     margin-right: 20px;
     font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s ease;
 }
 
 .links a:hover {
     color: #FFD700;
     text-decoration: underline;
+    transform: scale(1.1);
 }
 
 /* Hidden content */
@@ -281,3 +298,32 @@ p {
 
 .cookie-consent button:hover {
     background-color: #0056b3;
+}
+
+/* Animation des titres */
+@keyframes titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, h2, h3 {
+    animation: titleFadeIn 1s ease-in-out;
+}
+
+/* Animation des sections au défilement */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
