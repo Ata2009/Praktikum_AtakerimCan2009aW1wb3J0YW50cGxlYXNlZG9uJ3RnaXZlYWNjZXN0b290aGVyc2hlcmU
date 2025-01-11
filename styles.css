@@ -1,11 +1,10 @@
 /* styles.css */
 
 /* Importing fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
 
 /* Base body styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f7fa; /* Gris très clair */
