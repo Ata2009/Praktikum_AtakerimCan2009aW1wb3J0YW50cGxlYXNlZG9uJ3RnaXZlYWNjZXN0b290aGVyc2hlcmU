@@ -5,13 +5,10 @@
 
 /* Base body styling */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('https://www.toptal.com/designers/subtlepatterns/patterns/linen.png');
-    background-size: cover; /* L'image prend toute la taille de l'écran */
-    background-repeat: no-repeat; /* L'image ne se répète pas */
-    background-position: center center; /* L'image est centrée */
+    background-color: #f5f7fa; /* Gris très clair */
     color: #333;
 }
 /* Navbar styles */
