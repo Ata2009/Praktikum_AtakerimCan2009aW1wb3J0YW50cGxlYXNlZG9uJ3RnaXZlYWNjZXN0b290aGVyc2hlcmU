@@ -1,29 +1,30 @@
 /* styles.css */
 
-/* Importation des polices */
+/* Importing fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
 
-/* Appliquer la police par défaut au corps */
+/* Base body styling */
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f2f2f2;  /* Light gray background */
     color: #333;
 }
 
-/* Barre de navigation */
+/* Navbar styles */
 nav {
-    background: #007BFF;
-    padding: 10px 0;
+    background: #0062cc;  /* Darker blue for a more modern look */
+    padding: 12px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Soft shadow effect */
 }
 
-/* Menu de navigation */
+/* Navbar menu */
 .navbar {
     list-style: none;
     display: flex;
@@ -31,7 +32,7 @@ nav {
 }
 
 .navbar li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 .navbar a {
@@ -39,74 +40,85 @@ nav {
     text-decoration: none;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
-    transition: color 0.3s;
+    font-size: 1.1em;
+    transition: color 0.3s, transform 0.2s ease-in-out;
 }
 
 .navbar a:hover {
-    color: #FFD700;
+    color: #FFD700;  /* Gold hover effect */
+    transform: scale(1.1);  /* Slight scaling effect */
 }
 
-/* Conteneur principal */
+/* Main container */
 .container {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 30px;
     background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);  /* Larger shadow for depth */
+    background-image: url('https://www.transparenttextures.com/patterns/diagonal-stripes.png'); /* Subtle background texture */
+    background-color: #ffffff;
 }
 
-/* Titres principaux */
+/* Main heading */
 h1, h2, h3 {
-    color: #007BFF;
-    margin-bottom: 10px;
+    color: #007BFF;  /* Primary blue color */
+    margin-bottom: 15px;
     font-family: 'Playfair Display', serif;
 }
 
-/* Titre principal */
+/* Title h1 */
 h1 {
-    font-size: 2.8em;
+    font-size: 3em;
     font-weight: 700;
-    border-bottom: 2px solid #007BFF;
-    padding-bottom: 5px;
+    border-bottom: 3px solid #007BFF;
+    padding-bottom: 8px;
 }
 
-/* Sous-titres */
+/* Section headings h2 */
 h2 {
-    font-size: 2em;
-    margin-top: 25px;
-    font-weight: 500;
+    font-size: 2.2em;
+    margin-top: 30px;
+    font-weight: 600;
     cursor: pointer;
+    transition: color 0.3s;
 }
 
+h2:hover {
+    color: #007BFF;
+}
+
+/* Subtitle h3 */
 h3 {
     font-size: 1.6em;
     font-weight: 500;
 }
 
-/* Paragraphe */
+/* Paragraphs */
 p {
     line-height: 1.8;
     font-weight: 400;
+    font-size: 1.1em;
 }
 
-/* Photo de profil */
+/* Profile photo */
 .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
-    margin: 20px 0;
-    border: 3px solid #007BFF;
+    margin: 25px 0;
+    border: 4px solid #007BFF;
 }
 
-/* Vidéo */
+/* Video embed */
 .video {
     width: 100%;
     height: 315px;
     margin: 20px 0;
 }
 
-/* Liste de compétences */
+/* Skills list */
 .skills {
     list-style-type: none;
     padding: 0;
@@ -114,81 +126,88 @@ p {
 
 .skills li {
     background: #e7f1ff;
-    margin: 5px 0;
-    padding: 12px;
-    border-radius: 5px;
-    font-size: 1.1em;
-    transition: background 0.3s;
+    margin: 8px 0;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 1.2em;
+    transition: background 0.3s, transform 0.2s ease;
 }
 
 .skills li:hover {
     background: #d0e7ff;
+    transform: scale(1.05);  /* Smooth scale effect on hover */
 }
 
-/* Formulaire de contact */
+/* Contact form styling */
 .contact-form {
-    margin-top: 30px;
-    padding: 20px;
+    margin-top: 35px;
+    padding: 25px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Light shadow effect */
 }
 
 .contact-form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    font-weight: 500;
 }
 
 .contact-form input, .contact-form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 12px;
+    margin-bottom: 18px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 1.1em;
 }
 
-/* Bouton dans le formulaire */
 .contact-form button {
-    background-color: #007BFF;
+    background-color: #0062cc;
     color: white;
     border: none;
-    padding: 12px 15px;
-    border-radius: 5px;
+    padding: 15px 20px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1em;
-    transition: background 0.3s;
+    font-size: 1.2em;
+    transition: background 0.3s, transform 0.2s ease;
 }
 
 .contact-form button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);  /* Button hover scaling */
 }
 
-/* Footer */
+/* Footer styles */
 .footer {
     text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
+    margin-top: 30px;
+    font-size: 1em;
     color: #777;
 }
 
-/* Liens sociaux */
+/* Social media links */
 .links a {
     color: #007BFF;
     text-decoration: none;
-    margin-right: 15px;
+    margin-right: 20px;
     font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    transition: color 0.3s;
 }
 
 .links a:hover {
+    color: #FFD700;
     text-decoration: underline;
 }
 
-/* Styles pour le contenu caché */
+/* Hidden content */
 .hidden {
     display: none;
 }
 
-/* Styles pour la bannière des cookies */
+/* Cookie banner styling */
 #cookie-banner {
     position: fixed;
     bottom: 0;
@@ -196,9 +215,9 @@ p {
     right: 0;
     background-color: #333;
     color: white;
-    padding: 15px;
+    padding: 18px;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.1em;
     z-index: 1000;
     display: none;
     justify-content: center;
@@ -213,21 +232,22 @@ p {
 }
 
 #cookie-banner button {
-    background-color: #007BFF;
+    background-color: #0062cc;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1em;
-    margin-left: 10px;
+    font-size: 1.1em;
+    margin-left: 15px;
+    transition: background 0.3s;
 }
 
 #cookie-banner button:hover {
     background-color: #0056b3;
 }
 
-/* Consentement pour les cookies */
+/* Cookie consent styling */
 .cookie-consent {
     position: fixed;
     bottom: 0;
@@ -235,9 +255,9 @@ p {
     right: 0;
     background-color: #333;
     color: white;
-    padding: 15px;
+    padding: 18px;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.1em;
     z-index: 1000;
     display: none;
 }
@@ -249,20 +269,18 @@ p {
 }
 
 .cookie-consent p {
-    margin-right: 15px;
+    margin-right: 18px;
 }
 
 .cookie-consent button {
-    background-color: #007BFF;
+    background-color: #0062cc;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 .cookie-consent button:hover {
     background-color: #0056b3;
-}
-
