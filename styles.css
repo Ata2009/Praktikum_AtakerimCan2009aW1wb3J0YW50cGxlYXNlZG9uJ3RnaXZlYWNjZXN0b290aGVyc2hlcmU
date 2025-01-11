@@ -12,14 +12,12 @@ body {
 }
 /* Navbar styles */
 nav {
-    background: #0062cc;  /* Darker blue for a more modern look */
-    padding: 12px 0;
+    background: rgba(0, 123, 255, 0.8); /* Bleu avec 80% d'opacité */
+    padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Soft shadow effect */
 }
-
 /* Navbar menu */
 .navbar {
     list-style: none;
