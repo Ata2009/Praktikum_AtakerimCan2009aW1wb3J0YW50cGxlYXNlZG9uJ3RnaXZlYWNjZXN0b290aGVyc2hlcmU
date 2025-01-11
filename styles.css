@@ -1,13 +1,20 @@
 /* styles.css */
 
+/* Importation des polices */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* Appliquer la police par défaut au corps */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
 }
 
+/* Barre de navigation */
 nav {
     background: #007BFF;
     padding: 10px 0;
@@ -16,6 +23,7 @@ nav {
     z-index: 1000;
 }
 
+/* Menu de navigation */
 .navbar {
     list-style: none;
     display: flex;
@@ -30,6 +38,7 @@ nav {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-family: 'Roboto', sans-serif;
     transition: color 0.3s;
 }
 
@@ -37,6 +46,7 @@ nav {
     color: #FFD700;
 }
 
+/* Conteneur principal */
 .container {
     max-width: 900px;
     margin: 30px auto;
@@ -46,31 +56,41 @@ nav {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Titres principaux */
 h1, h2, h3 {
     color: #007BFF;
     margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
 }
 
+/* Titre principal */
 h1 {
-    font-size: 2.5em;
+    font-size: 2.8em;
+    font-weight: 700;
     border-bottom: 2px solid #007BFF;
     padding-bottom: 5px;
 }
 
+/* Sous-titres */
 h2 {
-    font-size: 1.8em;
+    font-size: 2em;
     margin-top: 25px;
+    font-weight: 500;
     cursor: pointer;
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 1.6em;
+    font-weight: 500;
 }
 
+/* Paragraphe */
 p {
-    line-height: 1.6;
+    line-height: 1.8;
+    font-weight: 400;
 }
 
+/* Photo de profil */
 .profile-photo {
     width: 150px;
     height: 150px;
@@ -79,12 +99,14 @@ p {
     border: 3px solid #007BFF;
 }
 
+/* Vidéo */
 .video {
     width: 100%;
     height: 315px;
     margin: 20px 0;
 }
 
+/* Liste de compétences */
 .skills {
     list-style-type: none;
     padding: 0;
@@ -95,6 +117,7 @@ p {
     margin: 5px 0;
     padding: 12px;
     border-radius: 5px;
+    font-size: 1.1em;
     transition: background 0.3s;
 }
 
@@ -102,6 +125,7 @@ p {
     background: #d0e7ff;
 }
 
+/* Formulaire de contact */
 .contact-form {
     margin-top: 30px;
     padding: 20px;
@@ -123,6 +147,7 @@ p {
     border-radius: 4px;
 }
 
+/* Bouton dans le formulaire */
 .contact-form button {
     background-color: #007BFF;
     color: white;
@@ -138,6 +163,7 @@ p {
     background-color: #0056b3;
 }
 
+/* Footer */
 .footer {
     text-align: center;
     margin-top: 20px;
@@ -145,10 +171,12 @@ p {
     color: #777;
 }
 
+/* Liens sociaux */
 .links a {
     color: #007BFF;
     text-decoration: none;
     margin-right: 15px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .links a:hover {
@@ -199,6 +227,7 @@ p {
     background-color: #0056b3;
 }
 
+/* Consentement pour les cookies */
 .cookie-consent {
     position: fixed;
     bottom: 0;
