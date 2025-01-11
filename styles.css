@@ -6,14 +6,14 @@
 /* Base body styling */
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;  /* Light gray background */
+    background: url('https://www.toptal.com/designers/subtlepatterns/patterns/linen.png');
+    background-size: cover; /* L'image prend toute la taille de l'écran */
+    background-repeat: no-repeat; /* L'image ne se répète pas */
+    background-position: center center; /* L'image est centrée */
     color: #333;
 }
-
 /* Navbar styles */
 nav {
     background: #0062cc;  /* Darker blue for a more modern look */
