@@ -12,13 +12,19 @@ body {
 }
 /* Navbar styles */
 nav {
-    background: rgba(0, 123, 255, 0.8); /* Bleu avec 80% d'opacité */
+    background: rgba(0, 123, 255, 0.8);
     padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: background-color 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-/* Navbar menu */
+
+nav:hover {
+    background: rgba(0, 123, 255, 1);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5);
+}
+
 .navbar {
     list-style: none;
     display: flex;
@@ -26,21 +32,18 @@ nav {
 }
 
 .navbar li {
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1em;
-    transition: color 0.3s, transform 0.2s ease-in-out;
+    transition: color 0.3s;
 }
 
 .navbar a:hover {
-    color: #FFD700;  /* Gold hover effect */
-    transform: scale(1.1);  /* Slight scaling effect */
+    color: #FFD700;
 }
 
 /* Main container */
